@@ -81,7 +81,7 @@ The table below benchmarks the leading commercial AI meeting assistants, sorted 
 <a id="open-source-github-projects"></a>
 ## 💻 Open-Source GitHub Projects
 
-Explore verified, open-source meeting assistants, local transcription engines, and stealth interview copilots. Repositories are sorted in **descending order by GitHub Stars_Count**:
+Explore verified, open-source meeting assistants, local transcription engines, and stealth interview copilots. Repositories are sorted in **descending order by GitHub_Stars_Count**:
 
 - ### 1. **[Meetily (Zackriya-Solutions/meetily)](https://github.com/Zackriya-Solutions/meetily)** [![Stars](https://img.shields.io/github/stars/Zackriya-Solutions/meetily?style=social&color=white)](https://github.com/Zackriya-Solutions/meetily/stargazers)
   **The #1 Self-Hosted, Open-Source AI Meeting Note Taker for macOS & Windows.**
