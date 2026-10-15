@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#080b11"/>
+    </linearGradient>
+
+    <!-- Glow Gradients -->
+    <radialGradient id="glowCyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="80%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowEmerald" cx="50%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Accent Linear Gradients -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="barGradCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="barGradPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filters -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 52px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        fill: #94a3b8;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.08); }
+      }
+      @keyframes floatPill {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+      .float-1 { animation: floatPill 4s ease-in-out infinite; }
+      .float-2 { animation: floatPill 4.5s ease-in-out infinite 0.8s; }
+      .float-3 { animation: floatPill 5s ease-in-out infinite 1.5s; }
+      .float-4 { animation: floatPill 4.2s ease-in-out infinite 2.2s; }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="380" rx="20" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Tech Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="380"/>
+    <line x1="300" y1="0" x2="300" y2="380"/>
+    <line x1="450" y1="0" x2="450" y2="380"/>
+    <line x1="600" y1="0" x2="600" y2="380"/>
+    <line x1="750" y1="0" x2="750" y2="380"/>
+    <line x1="900" y1="0" x2="900" y2="380"/>
+    <line x1="1050" y1="0" x2="1050" y2="380"/>
+  </g>
+
+  <!-- Ambient Light Orbs (Background) -->
+  <circle cx="220" cy="140" r="260" fill="url(#glowCyan)"/>
+  <circle cx="980" cy="150" r="280" fill="url(#glowPurple)"/>
+  <circle cx="600" cy="330" r="240" fill="url(#glowEmerald)"/>
+
+  <!-- Dynamic Equalizer Audio Waves (Background & Bottom) -->
+  <g transform="translate(60, 240)" opacity="0.65">
+    <!-- Bar 1 -->
+    <rect x="0" y="20" width="8" height="50" rx="4" fill="url(#barGradCyan)">
+      <animate attributeName="height" values="30;70;40;60;30" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="40;0;30;10;40" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 2 -->
+    <rect x="16" y="10" width="8" height="60" rx="4" fill="url(#barGradCyan)">
+      <animate attributeName="height" values="60;30;80;40;60" dur="2.1s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="10;40;-10;30;10" dur="2.1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 3 -->
+    <rect x="32" y="30" width="8" height="40" rx="4" fill="url(#barGradCyan)">
+      <animate attributeName="height" values="40;85;30;65;40" dur="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="30;-15;40;5;30" dur="1.9s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 4 -->
+    <rect x="48" y="15" width="8" height="55" rx="4" fill="url(#barGradCyan)">
+      <animate attributeName="height" values="55;25;75;45;55" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="15;45;-5;25;15" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 5 -->
+    <rect x="64" y="25" width="8" height="45" rx="4" fill="url(#barGradCyan)">
+      <animate attributeName="height" values="45;70;35;80;45" dur="2.0s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="25;0;35;-10;25" dur="2.0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Right Equalizer Waves -->
+  <g transform="translate(1060, 240)" opacity="0.65">
+    <!-- Bar R1 -->
+    <rect x="0" y="25" width="8" height="45" rx="4" fill="url(#barGradPurple)">
+      <animate attributeName="height" values="45;75;30;60;45" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="25;-5;40;10;25" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar R2 -->
+    <rect x="16" y="15" width="8" height="55" rx="4" fill="url(#barGradPurple)">
+      <animate attributeName="height" values="55;35;85;40;55" dur="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="15;35;-15;30;15" dur="1.9s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar R3 -->
+    <rect x="32" y="30" width="8" height="40" rx="4" fill="url(#barGradPurple)">
+      <animate attributeName="height" values="40;65;25;75;40" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="30;5;45;-5;30" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar R4 -->
+    <rect x="48" y="10" width="8" height="60" rx="4" fill="url(#barGradPurple)">
+      <animate attributeName="height" values="60;20;70;35;60" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="10;50;0;35;10" dur="1.7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar R5 -->
+    <rect x="64" y="35" width="8" height="35" rx="4" fill="url(#barGradPurple)">
+      <animate attributeName="height" values="35;80;40;60;35" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="35;-10;30;10;35" dur="2.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Foreground Content Container -->
+  <!-- Top Badge / Header Tag -->
+  <g transform="translate(60, 52)">
+    <rect width="210" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <circle cx="16" cy="16" r="5" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="30" y="21" class="pill-text" fill="#38bdf8">CURATED ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Title -->
+  <g transform="translate(60, 135)" filter="url(#shadow)">
+    <text x="0" y="0" class="title-text" fill="url(#textGrad)">Awesome AI Meeting Assistants</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(60, 178)">
+    <text x="0" y="0" class="subtitle-text">Real-Time Transcription • Local-First Whisper • Stealth Copilots • Action Insights</text>
+  </g>
+
+  <!-- Dynamic Feature Pills (Floating, positioned neatly in bottom half) -->
+  <g transform="translate(60, 240)">
+    <!-- Pill 1: Real-Time Transcription -->
+    <g class="float-1" transform="translate(0, 0)">
+      <rect width="220" height="42" rx="21" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="24" y="26" class="pill-text" fill="#e2e8f0">🎙️ Real-Time Transcription</text>
+    </g>
+
+    <!-- Pill 2: Local-First Whisper -->
+    <g class="float-2" transform="translate(236, 0)">
+      <rect width="210" height="42" rx="21" fill="url(#cardGrad)" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="24" y="26" class="pill-text" fill="#e2e8f0">🔒 Local-First Whisper</text>
+    </g>
+
+    <!-- Pill 3: Stealth Interview Copilots -->
+    <g class="float-3" transform="translate(462, 0)">
+      <rect width="230" height="42" rx="21" fill="url(#cardGrad)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="24" y="26" class="pill-text" fill="#e2e8f0">🥷 Stealth Copilots &amp; RAG</text>
+    </g>
+
+    <!-- Pill 4: SaaS & Self-Hosted -->
+    <g class="float-4" transform="translate(708, 0)">
+      <rect width="200" height="42" rx="21" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="24" y="26" class="pill-text" fill="#e2e8f0">⚡ SaaS + Open Source</text>
+    </g>
+  </g>
+
+  <!-- Border Accent Glow -->
+  <rect x="0.5" y="0.5" width="1199" height="379" rx="20" fill="none" stroke="#334155" stroke-opacity="0.6" stroke-width="1"/>
+</svg>
